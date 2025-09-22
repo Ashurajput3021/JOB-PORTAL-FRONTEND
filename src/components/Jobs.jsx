@@ -36,6 +36,7 @@ const Jobs = () => {
     if (searchedQuery) {
       jobs = jobs.filter(
         (job) =>
+          job.name.toLowerCase().includes(searchedQuery.toLowerCase()) ||
           job.title.toLowerCase().includes(searchedQuery.toLowerCase()) ||
           job.description.toLowerCase().includes(searchedQuery.toLowerCase()) ||
           job.location.toLowerCase().includes(searchedQuery.toLowerCase()) ||
